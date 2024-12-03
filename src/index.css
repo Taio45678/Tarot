@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@keyframes stars {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.animate-stars {
+  background: url('https://www.transparenttextures.com/patterns/star.png') repeat center center;
+  background-size: 5px 5px;
+  animation: stars 60s linear infinite;
+}
+
