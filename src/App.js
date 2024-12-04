@@ -95,8 +95,8 @@ function App() {
       Mi camino comenzó con una profunda conexión con la naturaleza y la
       energía de los cristales. Desde entonces, he dedicado mi vida a aprender
       y compartir técnicas que promuevan el bienestar integral. Con la
-      integración de <span className="font-bold">masajes con aceites esenciales</span>, la
-      <span className="font-bold">lectura de tarot</span> y la conexión con la
+      integración de <span className="font-bold">masajes con aceites esenciales</span>, la 
+      <span className="font-bold"> lectura de tarot</span> y la conexión con la
       <span className="font-bold">energía de los cristales</span>, busco ofrecer
       herramientas que permitan a cada persona desbloquear su energía interior
       y vivir en equilibrio.
@@ -174,8 +174,8 @@ function App() {
   </div>
 </section>
 
+      {/* Contáctame asdasdasd*/}
 
-      {/* Contáctame */}
       <section id="contacto" className="py-20 bg-crystalPink text-center">
         <motion.h2
           className="text-4xl font-bold text-black mb-8"
@@ -194,11 +194,11 @@ function App() {
           <div className="mt-8 flex justify-center gap-8">
             {[
               {
-                href: "https://www.instagram.com/verom.eda/",
+                href: "https://www.instagram.com/lluzdelalmaa/",
                 icon: "fab fa-instagram",
               },
               {
-                href: "https://www.facebook.com/veronica.meda.12",
+                href: "https://www.facebook.com/profile.php?id=100053547937565" ,
                 icon: "fab fa-facebook",
               },
               {
@@ -213,6 +213,7 @@ function App() {
                 className="text-crystalPink text-4xl transition duration-300 transform hover:scale-125"
                 whileHover={{ scale: 1.2 }}
               >
+      {/* Contáctame asdasdasd*/}
                 <i className={link.icon}></i>
               </motion.a>
             ))}
