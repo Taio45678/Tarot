@@ -15,7 +15,7 @@ function App() {
       <section className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-tarotGold to-crystalPink">
   {/* Imagen PNG del logo */}
   <motion.img
-    src="https://i.imgur.com/IDSFJYo.png" // Cambia esta URL por tu imagen PNG
+    src="https://i.imgur.com/IDSFJYo.png" 
     alt="Luz del Alma"
     className="w-48 md:w-64 object-contain transition-transform duration-300 hover:scale-105"
     initial={{ opacity: 0, y: -50 }}
@@ -121,7 +121,7 @@ function App() {
         title: "Masajes Holísticos",
         description:
           "Relaja tu cuerpo y equilibra tu mente con masajes que integran técnicas tradicionales y energéticas.",
-        img: "https://i.imgur.com/gI8NX96.jpeg",
+        img: "https://i.imgur.com/RlWOaZb.jpeg",
       },
       {
         title: "Reiki",
@@ -213,7 +213,7 @@ function App() {
                 className="text-crystalPink text-4xl transition duration-300 transform hover:scale-125"
                 whileHover={{ scale: 1.2 }}
               >
-      {/* Contáctame asdasdasd*/}
+     
                 <i className={link.icon}></i>
               </motion.a>
             ))}
