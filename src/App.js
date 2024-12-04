@@ -202,7 +202,7 @@ function App() {
                 icon: "fab fa-facebook",
               },
               {
-                href: "https://wa.me/123456789",
+                href: "https://wa.me/543854133379?text=¡Buenas!%20Me%20interesó%20tu%20página.%20Quisiera%20informarme%20más%20sobre%20tus%20servicios%20y%20costos.%20¿Podrías%20darme%20más%20detalles?",
                 icon: "fab fa-whatsapp",
               },
             ].map((link, index) => (
