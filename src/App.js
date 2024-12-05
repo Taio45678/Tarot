@@ -4,7 +4,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { Link } from "react-scroll";
 import Countdown from "./components/countdown.js"; // Ajusta la ruta según la ubicación del archivo
-
+import StarsCanvas from "./components/starscanvas.js"; // Asegúrate de ajustar la ruta según tu proyecto.
 function App() {
   useEffect(() => {
     AOS.init({ duration: 1000 });
@@ -12,16 +12,17 @@ function App() {
 
   return (
     <div className="font-serif text-spiritualBlue bg-crystalPink min-h-screen relative">
+      <StarsCanvas />
       {/* Luz del Alma Section */}
       <section className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-tarotGold to-crystalPink">
   {/* Imagen PNG del logo */}
   <motion.img
     src="https://i.imgur.com/IDSFJYo.png" 
     alt="Luz del Alma"
-    className="w-48 md:w-64 object-contain transition-transform duration-300 hover:scale-105"
-    initial={{ opacity: 0, y: -50 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 1 }}
+    className="w-48 md:w-64 object-contain transition-transform duration-300 hover:scale-105 relative z-1"
+  initial={{ opacity: 0, y: -50 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1 }}
   />
 
   {/* Título */}
@@ -110,7 +111,6 @@ function App() {
   </motion.div>
 </section>
 
-     {/* Servicios */}
 <section id="servicios" className="py-20 bg-crystalPink">
   <h2 className="text-4xl font-bold text-center text-black mb-10">
     Servicios
@@ -129,35 +129,40 @@ function App() {
         description:
           "Canalización de energía universal para armonizar tu cuerpo, mente y espíritu.",
         img: "https://i.imgur.com/dKS2hNU.jpeg",
+        availableDistance: true,
       },
       {
         title: "Cristales Tameana",
         description:
           "Un ritual energético con cristales de cuarzo diseñado para desbloquear tu energía y elevar tu vibración.",
         img: "https://i.imgur.com/U5ixyw4.jpeg",
+        availableDistance: true,
       },
       {
         title: "Alineación de Chakras",
         description:
           "Restaura el equilibrio natural de tus chakras para mejorar tu bienestar físico y emocional.",
         img: "https://i.imgur.com/kLwMeVz.jpeg",
+        availableDistance: true,
       },
       {
         title: "Limpiezas Energéticas y Cirugía Astral",
         description:
           "Limpia bloqueos energéticos profundos y experimenta una conexión renovada con tu ser.",
         img: "https://i.imgur.com/5RYN9z3.jpeg",
+        availableDistance: true,
       },
       {
         title: "Lecturas de Tarot",
         description:
           "Descubre respuestas claras y guía espiritual a través del tarot, iluminando tu camino.",
         img: "https://i.imgur.com/0K3b8Qj.jpeg",
+        availableDistance: true,
       },
     ].map((service, index) => (
       <motion.div
         key={index}
-        className="p-8 bg-white shadow-lg rounded-lg text-center transform transition duration-500 hover:scale-105 hover:shadow-2xl hover:bg-tarotGold hover:text-white"
+        className="p-8 bg-white shadow-lg rounded-lg text-center transform transition duration-500 hover:scale-105 hover:shadow-2xl hover:bg-tarotGold hover:text-white relative z-1"
         initial={{ opacity: 0, scale: 0.8 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
@@ -166,16 +171,24 @@ function App() {
         <img
           src={service.img}
           alt={service.title}
-          className="mx-auto mb-4 border-4 border-tarotGold rounded-lg p-2 transition duration-300 ease-in-out transform hover:scale-110"
+          className="mx-auto mb-4 border-4 border-tarotGold rounded-lg p-2 transition duration-300 ease-in-out transform hover:scale-110 w-3/4" // Ajusta el tamaño de la imagen a 75%
         />
         <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
         <p className="text-lg text-gray-700">{service.description}</p>
+        
+        {/* Agregar el mensaje de DISPONIBLE A DISTANCIA solo si está marcado como tal */}
+        {service.availableDistance && (
+          <div className="mt-4 text-sm text-black font-semibold">
+            DISPONIBLE A DISTANCIA
+          </div>
+        )}
       </motion.div>
     ))}
   </div>
 </section>
+
 {/* Retiro Espiritual */}
-<section id="retiro" className="py-20 bg-gradient-to-b from-crystalPink to-white">
+<section id="retiro" className="py-20 bg-gradient-to-b from-crystalPink ">
   <h2 className="text-4xl font-bold text-center text-black mb-10">
     Retiro Espiritual: Luz del Alma
   </h2>
@@ -243,7 +256,7 @@ function App() {
 
       {/* Contáctame asdasdasd*/}
 
-      <section id="contacto" className="py-20 bg-crystalPink text-center">
+      <section id="contacto" className="py-20 bg-crystalPink to-white text-center">
         <motion.h2
           className="text-4xl font-bold text-black mb-8"
           initial={{ opacity: 0, y: -50 }}
