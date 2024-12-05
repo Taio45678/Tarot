@@ -254,52 +254,141 @@ function App() {
 </section>
 
 
-      {/* Contáctame asdasdasd*/}
+     {/* FAQ */}
+<section id="faq" className="py-20 bg-crystalPink px-6 lg:px-20">
+  <motion.h2
+    className="text-4xl font-bold text-black mb-12 text-left"
+    initial={{ opacity: 0, y: -50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 1 }}
+  >
+    Preguntas Frecuentes
+  </motion.h2>
 
-      <section id="contacto" className="py-20 bg-crystalPink to-white text-center">
-        <motion.h2
-          className="text-4xl font-bold text-black mb-8"
-          initial={{ opacity: 0, y: -50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1 }}
+  <div className="flex flex-col gap-6 max-w-full">
+    {/* Pregunta 1 */}
+    <div className="border-b border-gray-200 w-full">
+      <motion.button
+        className="w-full text-left p-5 bg-tarotGold text-white rounded-lg shadow-md hover:bg-crystalPink focus:outline-none"
+        onClick={() => document.getElementById("answer1").classList.toggle("hidden")}
+        whileHover={{ scale: 1.05 }} // Animación al pasar el mouse
+        transition={{ duration: 0.2 }}
+      >
+        ¿Qué es un masaje holístico?
+      </motion.button>
+      <motion.p
+        id="answer1"
+        className="hidden text-lg text-gray-700 p-4 bg-gray-100 mt-2 rounded-lg text-left"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+      >
+        Un masaje holístico busca equilibrar cuerpo, mente y espíritu, utilizando técnicas que buscan liberar bloqueos energéticos y mejorar el bienestar general.
+      </motion.p>
+    </div>
+
+    {/* Pregunta 2 */}
+    <div className="border-b border-gray-200 w-full">
+      <motion.button
+        className="w-full text-left p-5 bg-tarotGold text-white rounded-lg shadow-md hover:bg-crystalPink focus:outline-none"
+        onClick={() => document.getElementById("answer2").classList.toggle("hidden")}
+        whileHover={{ scale: 1.05 }} // Animación al pasar el mouse
+        transition={{ duration: 0.2 }}
+      >
+        ¿Puedo recibir sesión Reiki a distancia?
+      </motion.button>
+      <motion.p
+        id="answer2"
+        className="hidden text-lg text-gray-700 p-4 bg-gray-100 mt-2 rounded-lg text-left"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+      >
+        Sí, las sesiones de Reiki a distancia son muy efectivas. La energía fluye independientemente de la distancia física.
+      </motion.p>
+    </div>
+
+    {/* Pregunta 3 */}
+    <div className="border-b border-gray-200 w-full">
+      <motion.button
+        className="w-full text-left p-5 bg-tarotGold text-white rounded-lg shadow-md hover:bg-crystalPink focus:outline-none"
+        onClick={() => document.getElementById("answer3").classList.toggle("hidden")}
+        whileHover={{ scale: 1.05 }} // Animación al pasar el mouse
+        transition={{ duration: 0.2 }}
+      >
+        ¿Cómo funciona la lectura de Tarot?
+      </motion.button>
+      <motion.p
+        id="answer3"
+        className="hidden text-lg text-gray-700 p-4 bg-gray-100 mt-2 rounded-lg text-left"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.4 }}
+      >
+        La lectura de Tarot se basa en la interpretación de las cartas que salen en una tirada. Estas cartas nos ayudan a reflexionar sobre tu camino, tus decisiones y el futuro.
+      </motion.p>
+    </div>
+
+    {/* Pregunta 4 */}
+    <div className="border-b border-gray-200 w-full">
+      <motion.button
+        className="w-full text-left p-5 bg-tarotGold text-white rounded-lg shadow-md hover:bg-crystalPink focus:outline-none"
+        onClick={() => document.getElementById("answer4").classList.toggle("hidden")}
+        whileHover={{ scale: 1.05 }} // Animación al pasar el mouse
+        transition={{ duration: 0.2 }}
+      >
+        ¿Qué beneficio ofrecen los cristales?
+      </motion.button>
+      <motion.p
+        id="answer4"
+        className="hidden text-lg text-gray-700 p-4 bg-gray-100 mt-2 rounded-lg text-left"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
+      >
+        Los cristales tienen propiedades energéticas que ayudan a equilibrar emociones, mejorar la salud física y espiritual, y promover la armonía interna.
+      </motion.p>
+    </div>
+  </div>
+</section>
+
+{/* Contáctame */}
+<section id="contacto" className="py-20 bg-gradient-to-b from-crystalPink to-white text-center">
+  <motion.h2
+    className="text-4xl font-bold text-black mb-8"
+    initial={{ opacity: 0, y: -50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 1 }}
+  >
+    ¡Contáctame!
+  </motion.h2>
+  <div className="max-w-3xl mx-auto p-8 bg-white rounded-xl shadow-lg">
+    <p className="text-lg text-gray-800 mb-8">
+      Si tienes preguntas o deseas más información sobre mis servicios,
+      no dudes en contactarme.
+    </p>
+    <div className="mt-8 flex justify-center gap-8">
+      {[  
+        { href: "https://www.instagram.com/lluzdelalmaa/", icon: "fab fa-instagram" },
+        { href: "https://www.facebook.com/profile.php?id=100053547937565", icon: "fab fa-facebook" },
+        { href: "https://wa.me/543854133379?text=¡Buenas!%20Me%20interesó%20tu%20página.%20Quisiera%20informarme%20más%20sobre%20tus%20servicios%20y%20costos.%20¿Podrías%20darme%20más%20detalles?", icon: "fab fa-whatsapp" },
+      ].map((link, index) => (
+        <motion.a
+          key={index}
+          href={link.href}
+          target="_blank"
+          className="text-crystalPink text-4xl transition duration-300 transform hover:scale-125"
+          whileHover={{ scale: 1.2 }}
         >
-          ¡Contáctame!
-        </motion.h2>
-        <div className="max-w-3xl mx-auto p-8 bg-white rounded-xl shadow-lg">
-          <p className="text-lg text-gray-800 mb-8">
-            Si tienes preguntas o deseas más información sobre mis servicios,
-            no dudes en contactarme.
-          </p>
-          <div className="mt-8 flex justify-center gap-8">
-            {[
-              {
-                href: "https://www.instagram.com/lluzdelalmaa/",
-                icon: "fab fa-instagram",
-              },
-              {
-                href: "https://www.facebook.com/profile.php?id=100053547937565" ,
-                icon: "fab fa-facebook",
-              },
-              {
-                href: "https://wa.me/543854133379?text=¡Buenas!%20Me%20interesó%20tu%20página.%20Quisiera%20informarme%20más%20sobre%20tus%20servicios%20y%20costos.%20¿Podrías%20darme%20más%20detalles?",
-                icon: "fab fa-whatsapp",
-              },
-            ].map((link, index) => (
-              <motion.a
-                key={index}
-                href={link.href}
-                target="_blank"
-                className="text-crystalPink text-4xl transition duration-300 transform hover:scale-125"
-                whileHover={{ scale: 1.2 }}
-              >
-     
-                <i className={link.icon}></i>
-              </motion.a>
-            ))}
-          </div>
-        </div>
-      </section>
+          <i className={link.icon}></i>
+        </motion.a>
+      ))}
+    </div>
+  </div>
+</section>
+
     </div>
   );
 }
