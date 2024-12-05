@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Link } from "react-scroll";
+import Countdown from "./components/countdown.js"; // Ajusta la ruta según la ubicación del archivo
 
 function App() {
   useEffect(() => {
@@ -173,6 +174,72 @@ function App() {
     ))}
   </div>
 </section>
+{/* Retiro Espiritual */}
+<section id="retiro" className="py-20 bg-gradient-to-b from-crystalPink to-white">
+  <h2 className="text-4xl font-bold text-center text-black mb-10">
+    Retiro Espiritual: Luz del Alma
+  </h2>
+  <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 px-4">
+    {/* Imagen del retiro */}
+    <motion.div
+      className="w-full md:w-1/2"
+      initial={{ opacity: 0, x: -50 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1 }}
+    >
+      <img
+        src="https://i.imgur.com/dq9mlzo.jpeg" // Reemplaza con tu URL de imagen
+        alt="Retiro Espiritual Luz del Alma"
+        className="rounded-lg shadow-lg object-cover w-full h-auto transform hover:scale-105 transition duration-300"
+      />
+    </motion.div>
+
+    {/* Tarjeta del retiro */}
+    <motion.div
+      className="w-full md:w-1/2 text-center md:text-left rounded-xl border-4 border-tarotGold bg-gradient-to-b from-white to-crystalPink shadow-lg p-8"
+      initial={{ opacity: 0, x: 50 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1 }}
+    >
+      <h3 className="text-3xl font-bold text-tarotGold mb-6">
+        Renueva tu Energía y Reconecta con tu Interior
+      </h3>
+      <p className="text-lg text-gray-700 mb-4">
+        Sumérgete en una experiencia transformadora en un entorno lleno de paz y armonía.
+      </p>
+      <p className="text-lg text-gray-700 mb-4">
+        🌿 <strong>Incluye:</strong> Meditación guiada, Alojamiento, Comidas completas, Talleres de música,
+        Taller del movimiento, Puertas del cielo con merienda y anochecer viendo el cielo y mas.
+      </p>
+      <p className="text-lg text-gray-700 mb-4">
+        📍 <strong>Ubicación:</strong> Capilla del monte, Córdoba, Argentina<br />
+        📅 <strong>Fecha:</strong> 28-30 de Marzo, 2025
+      </p>
+
+      {/* Contador */}
+      <div className="text-center my-6">
+        <p className="text-lg text-Black font-bold mb-4">
+          ¡Reserva antes del <span className="text-Violet">15 de Marzo</span> para obtener un descuento!
+        </p>
+        <Countdown targetDate="2025-03-15T23:59:59" />
+      </div>
+
+      {/* Botón de reserva */}
+      <motion.a
+        href="https://wa.me/543854133379?text=Hola,%20quiero%20saber%20más%20sobre%20el%20retiro%20espiritual%20Luz%20del%20Alma."
+        target="_blank"
+        className="px-6 py-3 bg-crystalPink text-white font-bold rounded-lg shadow-lg hover:bg-tarotGold hover:shadow-xl transition duration-300 transform hover:scale-110"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        Reservar mi lugar
+      </motion.a>
+    </motion.div>
+  </div>
+</section>
+
 
       {/* Contáctame asdasdasd*/}
 
