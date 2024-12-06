@@ -122,7 +122,7 @@ function App() {
         title: "Masajes Holísticos",
         description:
           "Relaja tu cuerpo y equilibra tu mente con masajes que integran técnicas tradicionales y energéticas.",
-        img: "https://i.imgur.com/RlWOaZb.jpeg",
+        img: "https://i.imgur.com/bEghrUz.jpeg",
       },
       {
         title: "Reiki",
